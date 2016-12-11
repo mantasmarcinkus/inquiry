@@ -4,9 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Question.BL;
 
 namespace Question.Api
 {
@@ -28,7 +30,10 @@ namespace Question.Api
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
+            services.AddDbContext<InquiryContext>(opt => opt.UseInMemoryDatabase());
             services.AddMvc();
+            services.AddScoped<IInquiryManager, InquiryManager>();
+            services.AddScoped<IResponseManager, ResponseManager>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,6 +41,9 @@ namespace Question.Api
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
+
+            var context = app.ApplicationServices.GetService<InquiryContext>();
+            InquiryHelper.AddTestData(context);
 
             app.UseMvc();
         }

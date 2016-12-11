@@ -8,9 +8,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7604A288-0053-4A06-961B-93CBD492A1E6}"
 	ProjectSection(SolutionItems) = preProject
 		global.json = global.json
+		src\Question.Api\README.md = src\Question.Api\README.md
 	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Question.Api", "src\Question.Api\Question.Api.xproj", "{6662C322-182E-4CF0-9D80-964998589D90}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Question.BL", "src\Question.BL\Question.BL.xproj", "{0670BE29-A0C9-4FB6-BCB9-187400B4B9C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,11 +25,16 @@ Global
 		{6662C322-182E-4CF0-9D80-964998589D90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6662C322-182E-4CF0-9D80-964998589D90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6662C322-182E-4CF0-9D80-964998589D90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0670BE29-A0C9-4FB6-BCB9-187400B4B9C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0670BE29-A0C9-4FB6-BCB9-187400B4B9C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0670BE29-A0C9-4FB6-BCB9-187400B4B9C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0670BE29-A0C9-4FB6-BCB9-187400B4B9C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6662C322-182E-4CF0-9D80-964998589D90} = {BB252731-C44D-4E9D-9DF6-203481B11616}
+		{0670BE29-A0C9-4FB6-BCB9-187400B4B9C8} = {BB252731-C44D-4E9D-9DF6-203481B11616}
 	EndGlobalSection
 EndGlobal
